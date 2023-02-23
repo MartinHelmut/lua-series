@@ -4,6 +4,7 @@ source = {
    url = "https://github.com/MartinHelmut/lua-series.git"
 }
 description = {
+   summary = "The companion repository to my Lua blog series.",
    homepage = "https://martin-fieber.de/series/lua/",
    license = "MIT"
 }
