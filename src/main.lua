@@ -1,3 +1,4 @@
-local greeting = "Hello, reader."
+local inspect = require("inspect")
+local output = { "Hello, reader.", 42 }
 
-print(greeting)
+print(inspect(output))

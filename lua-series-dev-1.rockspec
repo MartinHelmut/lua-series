@@ -9,7 +9,8 @@ description = {
    license = "MIT"
 }
 dependencies = {
-   "lua >= 5.1, < 5.5"
+   "lua >= 5.1, < 5.5",
+   "inspect >= 3.1"
 }
 build = {
    type = "builtin",
