@@ -20,7 +20,7 @@ How to get Lua and LuaRocks is in detail covered in [the first article of the Lu
 After cloning the repo and entering the project folder, load the project environment context with `direnv allow`, and install all dependencies.
 
 ```shell
-direnv allow
+direnv allow  # Only needed once
 luarocks install --deps-only lua-series-dev-1.rockspec
 ```
 
