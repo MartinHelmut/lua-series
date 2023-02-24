@@ -9,7 +9,7 @@ The `main` branch is the latest iteration of the series. Every article has its o
 - [Lua](http://www.lua.org), version 5.1 or up
 - [LuaRocks](https://luarocks.org), any recent version supporting Lua 5.1 and up, e.g. 3.9
 
-How to get Lua and LuaRocks is in detail covered in [the first article of the Lua series]().
+How to get Lua and LuaRocks is in detail covered in [the first article of the Lua series](https://martin-fieber.de/blog/lua-project-setup-with-luarocks/).
 
 - [direnv](https://direnv.net) is optional, but very helpful
 
