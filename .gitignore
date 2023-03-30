@@ -2,3 +2,4 @@
 /.luarocks
 /luarocks
 /lua
+/*.rock
