@@ -1,6 +1,6 @@
 # Lua series
 
-This is the companion repository for my [Lua series on my Blog](https://martin-fieber.de/series/lua/).
+This is the companion repository for my [Lua series on my Blog](https://martin-fieber.de/series/lua/). Specifically for the second article: [Create, publish, and integrate dependencies in Lua](https://martin-fieber.de/blog/create-publish-integrate-dependencies-in-lua/).
 
 The `main` branch is the latest iteration of the series. Every article has its own branch, based on what part it is. The first one being `part-1` and so on.
 
