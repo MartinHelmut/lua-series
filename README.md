@@ -4,6 +4,8 @@ This is the companion repository for my [Lua series on my Blog](https://martin-f
 
 The `main` branch is the latest iteration of the series. Every article has its own branch, based on what part it is. The first one being `part-1` and so on.
 
+The in part 2 [published package can be found on LuaRocks](https://luarocks.org/modules/martinhelmut/lua-series).
+
 ## Requirements
 
 - [Lua](http://www.lua.org), version 5.1 or up
