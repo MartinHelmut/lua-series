@@ -36,7 +36,7 @@ build = {
 }
 test = {
    type = "command",
-   command = "./lua src/test.lua -o TAP",
+   command = "lua src/test.lua -o TAP",
 }
 test_dependencies = {
    "luaunit >= 3.4"

@@ -21,7 +21,7 @@ After cloning the repo and entering the project folder, load the project environ
 
 ```shell
 direnv allow  # Only needed once
-luarocks install --deps-only lua-series-dev-1.rockspec
+luarocks install --deps-only lua-series-1.1.0-1.rockspec
 ```
 
 Now you can run any script from the project.

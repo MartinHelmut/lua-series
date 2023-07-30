@@ -1,0 +1,16 @@
+name: test
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: leafo/gh-actions-lua@v10
+      - uses: leafo/gh-actions-luarocks@v4
+      - name: install
+        run: luarocks install --deps-only lua-series-1.1.0-1.rockspec
+      - name: test
+        run: luarocks test
+        env:
+          LUA_INIT: "@src/setup.lua"
