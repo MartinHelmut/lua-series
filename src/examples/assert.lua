@@ -1,5 +1,5 @@
 -- Basic test wrapper
-function test(fn)
+local function test(fn)
 	local status, err = pcall(fn)
 	if not status then
 		print(err)

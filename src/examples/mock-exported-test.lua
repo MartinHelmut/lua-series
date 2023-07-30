@@ -4,7 +4,7 @@ local lu = require("luaunit")
 -- local someModule = require("some-module")
 local someModule = { fn = function () return false end }
 
-TestSomeModule = {}
+local TestSomeModule = {}
 
 function TestSomeModule:setUp()
 	-- Backup the function that will be mocked
