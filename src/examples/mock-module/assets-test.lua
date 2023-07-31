@@ -19,7 +19,7 @@ end
 
 function TestAssets:test1()
 	local assets = require("examples/mock-module/assets")
-	lu.assertEquals(assets.get_path(), "/assets")
+	lu.assertEquals(assets.getPath(), "/assets")
 end
 
 function TestAssets:tearDown()
