@@ -1,6 +1,6 @@
 # Lua series
 
-This is the companion repository for my [Lua series on my Blog](https://martin-fieber.de/series/lua/).
+This is the companion repository for my [Lua series on my Blog](https://martin-fieber.de/series/lua/). Specifically for the third article: [How to test your Lua](https://martin-fieber.de/blog/how-to-test-your-lua/).
 
 The `main` branch is the latest iteration of the series. Every article has its own branch, based on what part it is. The first one being `part-1` and so on.
 
