@@ -9,7 +9,9 @@ jobs:
       - uses: leafo/gh-actions-lua@v10
       - uses: leafo/gh-actions-luarocks@v4
       - name: install
-        run: luarocks install --deps-only lua-series-1.1.0-1.rockspec
+        run: |
+          luarocks install \
+            --deps-only lua-series-1.1.0-1.rockspec
       - name: test
         run: luarocks test
         env:
