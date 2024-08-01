@@ -1,4 +1,4 @@
-local lu = require("luaunit")
+require("luaunit")
 local Logger = require("examples/logger")
 
 local TestLogger = {}
