@@ -14,7 +14,7 @@ function TestSomeModule:setUp()
 	someModule.fn = function () return true end
 end
 
-function TestSomeModule:test1()
+function TestSomeModule.test1()
 	lu.assertTrue(someModule.fn())
 end
 

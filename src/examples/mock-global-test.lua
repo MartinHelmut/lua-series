@@ -8,7 +8,7 @@ function TestGlobal:setUp()
 	self.backupPrint = _G.print
 end
 
-function TestGlobal:test1()
+function TestGlobal.test1()
 	local hasBeenCalled = false
 	_G.print = function () hasBeenCalled = true end
 	log("Hello World")

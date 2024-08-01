@@ -17,7 +17,7 @@ function TestAssets:setUp()
 	end
 end
 
-function TestAssets:test1()
+function TestAssets.test1()
 	local assets = require("examples/mock-module/assets")
 	lu.assertEquals(assets.getPath(), "/assets")
 end
