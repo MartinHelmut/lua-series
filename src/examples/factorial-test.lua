@@ -1,5 +1,5 @@
-local lu = require("luaunit")
-local factorial = require("examples/factorial")
+local lu = require "luaunit"
+local factorial = require "examples/factorial"
 
 local TestFactorial = {}
 

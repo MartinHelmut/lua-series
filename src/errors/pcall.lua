@@ -1,4 +1,4 @@
-local inspect = require("inspect")
+local inspect = require "inspect"
 
 local function call_hook(event)
     local s = debug.getinfo(2)

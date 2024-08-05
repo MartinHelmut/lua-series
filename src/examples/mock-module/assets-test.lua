@@ -1,4 +1,4 @@
-local lu = require("luaunit")
+local lu = require "luaunit"
 
 local TestAssets = {}
 
@@ -18,7 +18,7 @@ function TestAssets:setUp()
 end
 
 function TestAssets.test1()
-	local assets = require("examples/mock-module/assets")
+	local assets = require "examples/mock-module/assets"
 	lu.assertEquals(assets.getPath(), "/assets")
 end
 

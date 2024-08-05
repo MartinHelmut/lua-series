@@ -1,7 +1,7 @@
-local lu = require("luaunit")
+local lu = require "luaunit"
 
 -- Representing a module to require. Example:
--- local someModule = require("some-module")
+-- local someModule = require "some-module"
 local someModule = { fn = function () return false end }
 
 local TestSomeModule = {}

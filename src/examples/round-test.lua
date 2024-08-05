@@ -1,5 +1,5 @@
-local lu = require("luaunit")
-local round = require("examples/round")
+local lu = require "luaunit"
+local round = require "examples/round"
 
 local TestRound = {}
 
