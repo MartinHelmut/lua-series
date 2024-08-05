@@ -7,7 +7,7 @@ local function test(fn)
 end
 
 -- Testing some code
-local factorial = require("examples/factorial")
+local factorial = require "examples/factorial"
 
 test(function ()
 	assert( factorial(1) == 1, "Factor of 1 should be 1")

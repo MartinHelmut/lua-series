@@ -1,5 +1,5 @@
-local tr = require("examples/test-runner")
-local factorial = require("examples/factorial")
+local tr = require "examples/test-runner"
+local factorial = require "examples/factorial"
 
 tr:test(function ()
 	assert(factorial(1) == 1, "Factor of 1 should be 1")

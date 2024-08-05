@@ -1,4 +1,4 @@
-local profiler = require("profiler")
+local profiler = require "profiler"
 
 profiler:begin_session()
 

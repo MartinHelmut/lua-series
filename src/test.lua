@@ -1,10 +1,18 @@
-TestFactorial = require("examples/factorial-test")
-TestRound = require("examples/round-test")
-TestLogger = require("examples/logger-test")
-TestAssets = require("examples/mock-module/assets-test")
+local profiler = require "profiler"
 
-TestMockExported = require("examples/mock-exported-test")
-TestMockGlobal = require("examples/mock-global-test")
+profiler:begin_session()
 
-local lu = require("luaunit")
-os.exit(lu.LuaUnit.run())
+TestFactorial = require "examples/factorial-test"
+TestRound = require "examples/round-test"
+TestLogger = require "examples/logger-test"
+TestAssets = require "examples/mock-module/assets-test"
+
+TestMockExported = require "examples/mock-exported-test"
+TestMockGlobal = require "examples/mock-global-test"
+
+local lu = require "luaunit"
+local status = lu.LuaUnit.run()
+
+profiler:end_session()
+
+os.exit(status)

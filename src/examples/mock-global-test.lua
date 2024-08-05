@@ -1,4 +1,4 @@
-local lu = require("luaunit")
+local lu = require "luaunit"
 
 local function log(text) print(text) end
 
