@@ -93,6 +93,12 @@ function Instrumentator:create_hook()
             end
 
             local function _write(id, depth)
+                if self.function_stack[func][depth] == nil then
+                    -- TODO: There is probably an issue with clculating the tail calls
+                    -- depth here. Need to investigate further.
+                    return
+                end
+
                 local name = info.name or string.format("%s(%s:%s)", id, info.short_src, info.linedefined)
                 local start_time = self.function_stack[func][depth]
                 local end_time = self.clock() - start_time
