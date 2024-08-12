@@ -9,7 +9,7 @@ description = {
    summary = "The companion repository to my Lua blog series.",
    detailed = [[
         This package is for educational purposes and contains only some test
-        code for my Lua series of articles.
+        and example code for my Lua series.
     ]],
    homepage = "https://martin-fieber.de/series/lua/",
    license = "MIT",
