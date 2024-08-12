@@ -1,3 +1,7 @@
+local dbg = require "debugger"
+local error = dbg.error
+local pcall = dbg.call
+
 local function greet(str)
 	if type(str) ~= "string" then
 		error("Function 'greet' expects a string as argument.")

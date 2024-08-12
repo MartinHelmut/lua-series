@@ -10,7 +10,7 @@ end
 local factorial = require "examples/factorial"
 
 test(function ()
-	assert( factorial(1) == 1, "Factor of 1 should be 1")
+	assert(factorial(1) == 1, "Factor of 1 should be 1")
 end)
 
 test(function ()
