@@ -1,6 +1,8 @@
 -- Some inspiration from: https://github.com/2dengine/profile.lua
 -- To-be-closed information: https://lwn.net/Articles/826134/
 
+local debug = require "debug"
+
 local internal_functions = {}
 
 local Profile = {
@@ -12,8 +14,8 @@ function Profile:new(file)
     local obj = {
         file = file or self.file
     }
-    setmetatable(obj, self)
     self.__index = self
+    setmetatable(obj, self)
     return obj
 end
 
@@ -59,7 +61,7 @@ function Instrumentator:create_hook()
         info = info or debug.getinfo(2)
         local func = info.func
 
-        -- Ignore internal functions in trace
+        -- Ignore internal or C functions in trace
         if internal_functions[func] or info.what ~= "Lua" then
             return
         end
