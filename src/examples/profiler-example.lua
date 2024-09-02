@@ -1,4 +1,4 @@
-local profiler = require "profiler"
+local profiler = require "tools/profiler-mhf"
 
 profiler:begin_session()
 

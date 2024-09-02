@@ -20,13 +20,17 @@ function Profile:new(file)
 end
 
 function Profile:write_header()
-    self.output = '{"otherData": {},"traceEvents":[{}'
+    self.output = string.format([[{"metadata": {
+        "source": "CustomProfiler",
+        "startTime": "%s",
+        "dataOrigin": "TraceEvents"
+    },"traceEvents":[]], os.date("%Y-%m-%dT%X"))
 end
 
 function Profile:write_footer()
     local file_handle = io.open(self.file, "w")
     if file_handle then
-        file_handle:write(self.output .. "]}")
+        file_handle:write(self.output:sub(1, -2) .. "]}")
         self.output = ""
         io.close(file_handle)
     end
@@ -34,7 +38,8 @@ end
 
 function Profile:write_item(name, start_time, end_time)
     local json = [[
-    ,{
+    {
+        "args":{},
         "cat": "function",
         "dur": %f,
         "name": "%s",
@@ -42,14 +47,13 @@ function Profile:write_item(name, start_time, end_time)
         "pid": 0,
         "tid": 0,
         "ts": %f
-    }
-    ]]
+    },]]
     self.output = self.output .. string.format(json, end_time, name, start_time)
 end
 
 local Instrumentator = {
     -- Clock milliseconds to nanoseconds
-    clock = function () return os.clock() * 1000000 end,
+    clock = function() return os.clock() * 1000000 end,
     profile = nil,
     tail_calls = 0,
     function_stack = {},
@@ -57,7 +61,7 @@ local Instrumentator = {
 }
 
 function Instrumentator:create_hook()
-    return function (event, _line, info)
+    return function(event, _line, info)
         info = info or debug.getinfo(2)
         local func = info.func
 

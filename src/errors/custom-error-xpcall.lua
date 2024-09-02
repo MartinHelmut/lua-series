@@ -15,8 +15,8 @@ local function handle_error(err)
     return err.message .. "\n" .. debug.traceback()
 end
 
-local status, result = xpcall(work, handle_error, 1)
+local status, err = xpcall(work, handle_error, 1)
 
 if not status then
-    print(result)
+    print(err)
 end
