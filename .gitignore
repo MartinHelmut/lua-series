@@ -3,4 +3,5 @@
 /luarocks
 /lua
 /*.rock
+/*.sublime-workspace
 profile.json
