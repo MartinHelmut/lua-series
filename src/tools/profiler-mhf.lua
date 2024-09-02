@@ -1,6 +1,3 @@
--- Some inspiration from: https://github.com/2dengine/profile.lua
--- To-be-closed information: https://lwn.net/Articles/826134/
-
 local debug = require "debug"
 
 local internal_functions = {}
