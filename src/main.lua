@@ -1,7 +1,9 @@
+require "src/setup"
+
 local inspect = require "inspect"
 local output = {
-    "Hello, reader.",
-    42
+  "Hello, reader.",
+  42
 }
 
 print(inspect(output))
