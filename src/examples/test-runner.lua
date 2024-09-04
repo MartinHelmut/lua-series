@@ -3,10 +3,10 @@ local Runner = {
 }
 
 function Runner:test(fn)
-	local status, err = pcall(fn)
+	local status, result = pcall(fn)
 	if not status then
 		self.hasErrors = true
-		print(err)
+		print(result)
 	end
 end
 
