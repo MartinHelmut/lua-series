@@ -8,8 +8,8 @@ local function work(str)
     return "Doing some work: " .. str
 end
 
-local status, err = pcall(work, 1)
+local status, result = pcall(work, 1)
 
 if not status then
-    print(err.message)
+    print(result.message)
 end
