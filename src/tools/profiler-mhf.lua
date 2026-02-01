@@ -97,7 +97,7 @@ function Instrumentator:create_hook()
 
             local function _write(id, depth)
                 if self.function_stack[func][depth] == nil then
-                    -- TODO: There is probably an issue with clculating the tail calls
+                    -- TODO: There is probably an issue with calculating the tail calls
                     -- depth here. Need to investigate further.
                     return
                 end
@@ -105,6 +105,10 @@ function Instrumentator:create_hook()
                 local name = info.name or string.format("%s(%s:%s)", id, info.short_src, info.linedefined)
                 local start_time = self.function_stack[func][depth]
                 local end_time = self.clock() - start_time
+
+                -- Avoid 0 values for end_time as it can get interpreted as "forever"
+                if end_time < 1 then end_time = 1 end
+
                 self.profile:write_item(name, start_time, end_time)
                 self.function_stack[func][depth] = nil
             end
@@ -118,7 +122,7 @@ function Instrumentator:create_hook()
 
             _write("unknown", stack_depth)
 
-            -- Cleanup
+            -- Clean-up
             if next(self.function_stack[func]) == nil then
                 self.function_stack[func] = nil
             end
@@ -151,8 +155,11 @@ function Instrumentator:scope(name)
         local scope_name = string.format("%s(%s:%s)", name, info.short_src, info.linedefined)
         local start_time = self.scope_stack[name]
         local end_time = self.clock() - start_time
-        self.profile:write_item(scope_name, start_time, end_time)
 
+        -- Avoid 0 values for end_time as it can get interpreted as "forever"
+        if end_time < 1 then end_time = 1 end
+
+        self.profile:write_item(scope_name, start_time, end_time)
         self.scope_stack[name] = nil
     end
 
