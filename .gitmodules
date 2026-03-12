@@ -1,0 +1,3 @@
+[submodule "src/cpp/cmake_git_submodule/lua"]
+	path = src/cpp/cmake_git_submodule/lua
+	url = https://github.com/lua/lua.git

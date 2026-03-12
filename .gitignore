@@ -4,4 +4,6 @@
 /lua
 /*.rock
 /*.sublime-workspace
+
+build
 profile.json
